@@ -12,6 +12,7 @@ public:
 		left = nullptr;
 		right = nullptr;
 	}
+	~BTreeNode();
 private:
 	double value;
 	BTreeNode *left, *right;
@@ -33,4 +34,5 @@ public:
 	void inorder() { return inorder(tree); }			//Calls private inorder print function
 	int  leafCounter() { return leafCounter(tree); }	//Calls private leafcounter function
 	BST() { tree = nullptr; }
+	~BST();
 };

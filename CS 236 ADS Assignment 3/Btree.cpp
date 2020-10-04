@@ -87,3 +87,15 @@ void BST::insert(vector<double>&v)
 		insert(*i, tree);
 	}
 }
+
+BST::~BST()
+{
+	delete this->tree;
+}
+
+BTreeNode::~BTreeNode()
+{
+	delete this->left;
+	delete this->right;
+	this->value = NULL;
+}
